@@ -14,7 +14,7 @@ const std::string windowsAsciiArt = "
 "    \/___/_/   \/_/\/_/   \/_/  \/_/   \/_____/   \/_____/   \/_/   \/_/ \/_/ ";
                                                                                 
 
-const std::string nonwindowsAsciiArt = "
+const std::string nonWindowsAsciiArt = "
    ______     ______     __    __     ______     ______     __     __   __     "  
 " /\  __ \   /\  __ \   /\ "-./  \   /\  ___\   /\  __ \   /\ \   /\ "-.\ \    " 
 "  \ \ \/\_\  \ \  __ \  \ \ \-./\ \  \ \ \____  \ \ \/\ \  \ \ \  \ \ \-.  \  "  
