@@ -1,5 +1,5 @@
 // Copyright (c) 2018-2019, The TurtleCoin Developers
-// Copyright (c) 2019, The CyprusCoin Developers
+// Copyright (c) 20, The QamCoin Developers
 //
 // Please see the included LICENSE file for more information.
 
