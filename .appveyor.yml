@@ -23,7 +23,7 @@ build_script:
   - md build
   - cd build
   - cmake -G "Visual Studio 16 2019" -A x64 .. -DARCH=default -DOPENSSL_ROOT_DIR=C:\OpenSSL-v111-Win64
-  - MSBuild TurtleCoin.sln /p:CLToolExe=clcache.exe /p:CLToolPath=c:\Python37\Scripts\ /p:Configuration=Release /m
+  - MSBuild QameCoin.sln /p:CLToolExe=clcache.exe /p:CLToolPath=c:\Python37\Scripts\ /p:Configuration=Release /m
   - src\Release\cryptotest.exe
 
 after_build:
@@ -31,24 +31,24 @@ after_build:
   - if not defined APPVEYOR_REPO_TAG_NAME (set APPVEYOR_REPO_TAG_NAME=%APPVEYOR_REPO_COMMIT%)
   - cd src\Release
   - mkdir turtlecoin-%APPVEYOR_REPO_TAG_NAME%
-  - copy *.exe turtlecoin-%APPVEYOR_REPO_TAG_NAME%
-  - copy ..\..\..\LICENSE turtlecoin-%APPVEYOR_REPO_TAG_NAME%
-  - 7z a turtlecoin-%APPVEYOR_REPO_TAG_NAME%-windows.zip turtlecoin-%APPVEYOR_REPO_TAG_NAME%
-  - copy turtlecoin-%APPVEYOR_REPO_TAG_NAME%-windows.zip ..\..\..\
+  - copy *.exe qamcoin-%APPVEYOR_REPO_TAG_NAME%
+  - copy ..\..\..\LICENSE qamcoin-%APPVEYOR_REPO_TAG_NAME%
+  - 7z a qamcoin-%APPVEYOR_REPO_TAG_NAME%-windows.zip turtlecoin-%APPVEYOR_REPO_TAG_NAME%
+  - copy qamcoin-%APPVEYOR_REPO_TAG_NAME%-windows.zip ..\..\..\
 
 artifacts:
-  - path: turtlecoin-$(APPVEYOR_REPO_TAG_NAME)-windows.zip
-    name: TurtleCoinRelease
+  - path: qamcoin-$(APPVEYOR_REPO_TAG_NAME)-windows.zip
+    name: QamCoinRelease
 
 deploy:
   - provider: GitHub
     auth_token:
       secure: KFrN1rc9FJN3BEoX99whHEuK5iPHHLmDcZ1Ac7tgT9oR6AxyjL0B+XMQu4wqo+fK
-    artifact: TurtleCoinRelease
+    artifact: QamCoinRelease
     draft: false
     prerelease: false
     on:
-      appveyor_repo_name: turtlecoin/turtlecoin
+      appveyor_repo_name: qamcoin/qamcoin
       appveyor_repo_tag: true
 
   - provider: S3
@@ -56,10 +56,10 @@ deploy:
       secure: nVmSNpabdw1WcGdTTzxAEjza8j9icu89oyXbC8fZVuM=
     secret_access_key:
       secure: TpCxPp5npMRclcwHB3dhkd9ZsEgKstS6HOnQ1VR6YObEsaPyl5dr16ZdbsOgjykj
-    bucket: turtlecoin
+    bucket: qamcoin
     region: us-east-2
     set_public: true
-    folder: turtlecoin
-    artifact: TurtleCoinRelease
+    folder: qamcoin
+    artifact: QamCoinRelease
     on:
-      appveyor_repo_name: turtlecoin/turtlecoin
+      appveyor_repo_name: qamcoin/qamcoin
