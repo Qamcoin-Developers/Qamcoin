@@ -257,7 +257,7 @@ jobs:
           $env:CLCACHE_DIR = "$env:GITHUB_WORKSPACE\clcache"
           $env:PATH = "$env:PATH;$env:MSBUILD_PATH"
           cd build
-          MSBuild TurtleCoin.sln /p:CLToolExe=clcache.exe /p:Configuration=Release /p:PlatformToolset=v141 /m
+          MSBuild QamCoin.sln /p:CLToolExe=clcache.exe /p:Configuration=Release /p:PlatformToolset=v141 /m
 
       # Test the crypto
       - name: Test Crypto
@@ -275,14 +275,14 @@ jobs:
         run: |
           if [[ "${TAG:5:4}" == "tags" ]]; then export TAG=${TAG:10}; else export TAG=${COMMIT_SHA}; fi
           cd build/src/Release
-          rm -rf turtlecoin-${TAG}
-          mkdir turtlecoin-${TAG}
-          cp *.exe turtlecoin-${TAG}/
-          cp ../../../LICENSE turtlecoin-${TAG}/
-          7z a turtlecoin-${LABEL}-${TAG}.zip turtlecoin-${TAG}/
-          echo ::set-output name=binary_path::turtlecoin-${TAG}
-          echo ::set-output name=artifact_name::turtlecoin-${LABEL}-${TAG}
-          echo ::set-output name=file_name::turtlecoin-${LABEL}-${TAG}.zip
+          rm -rf qamcoin-${TAG}
+          mkdir qamcoin-${TAG}
+          cp *.exe qamcoin-${TAG}/
+          cp ../../../LICENSE qamcoin-${TAG}/
+          7z a qamcoin-${LABEL}-${TAG}.zip qamcoin-${TAG}/
+          echo ::set-output name=binary_path::qamcoin-${TAG}
+          echo ::set-output name=artifact_name::qamcoin-${LABEL}-${TAG}
+          echo ::set-output name=file_name::qamcoin-${LABEL}-${TAG}.zip
 
 
       # Upload to GH Release
