@@ -90,7 +90,7 @@ jobs:
           cmake -DARCH=default -DCMAKE_BUILD_TYPE=Release -DSTATIC=true ..
           make -j2
           cd src
-          TARGETS="TurtleCoind miner zedwallet turtle-service cryptotest wallet-api wallet-upgrader"
+          TARGETS="QamCoind miner zedwallet qam-service cryptotest wallet-api wallet-upgrader"
           ${STRIP} ${TARGETS}
 
       # Test the crypto
@@ -108,16 +108,16 @@ jobs:
         run: |
           if [[ "${TAG:5:4}" == "tags" ]]; then export TAG=${TAG:10}; else export TAG=${COMMIT_SHA}; fi
           cd build/src
-          TARGETS="TurtleCoind miner zedwallet turtle-service cryptotest wallet-api wallet-upgrader"
+          TARGETS="QamCoind miner zedwallet qam-service cryptotest wallet-api wallet-upgrader"
           if [[ "${LABEL}" != "aarch64" ]]; then strip ${TARGETS}; fi
           rm -rf turtlecoin-${TAG}
           mkdir turtlecoin-${TAG}
-          cp ${TARGETS} turtlecoin-${TAG}/
-          cp ../../LICENSE turtlecoin-${TAG}/
-          tar cvfz turtlecoin-${LABEL}-${TAG}.tar.gz turtlecoin-${TAG}/
-          echo ::set-output name=binary_path::turtlecoin-${TAG}
-          echo ::set-output name=artifact_name::turtlecoin-${LABEL}-${TAG}
-          echo ::set-output name=file_name::turtlecoin-${LABEL}-${TAG}.tar.gz
+          cp ${TARGETS} qamcoin-${TAG}/
+          cp ../../LICENSE qamcoin-${TAG}/
+          tar cvfz qamcoin-${LABEL}-${TAG}.tar.gz qamcoin-${TAG}/
+          echo ::set-output name=binary_path::qamcoin-${TAG}
+          echo ::set-output name=artifact_name::qamcoin-${LABEL}-${TAG}
+          echo ::set-output name=file_name::qamcoin-${LABEL}-${TAG}.tar.gz
 
       # Upload to GH Release
       - name: Upload to GH Release
@@ -191,16 +191,16 @@ jobs:
         run: |
           if [[ "${TAG:5:4}" == "tags" ]]; then export TAG=${TAG:10}; else export TAG=${COMMIT_SHA}; fi
           cd build/src
-          TARGETS="TurtleCoind miner zedwallet turtle-service cryptotest wallet-api wallet-upgrader"
+          TARGETS="QamCoind miner zedwallet qam-service cryptotest wallet-api wallet-upgrader"
           strip ${TARGETS}
-          rm -rf turtlecoin-${TAG}
-          mkdir turtlecoin-${TAG}
-          cp ${TARGETS} turtlecoin-${TAG}/
-          cp ../../LICENSE turtlecoin-${TAG}/
-          tar cvfz turtlecoin-${LABEL}-${TAG}.tar.gz turtlecoin-${TAG}/
-          echo ::set-output name=binary_path::turtlecoin-${TAG}
-          echo ::set-output name=artifact_name::turtlecoin-${LABEL}-${TAG}
-          echo ::set-output name=file_name::turtlecoin-${LABEL}-${TAG}.tar.gz
+          rm -rf qamcoin-${TAG}
+          mkdir qamcoin-${TAG}
+          cp ${TARGETS} qamcoin-${TAG}/
+          cp ../../LICENSE qamcoin-${TAG}/
+          tar cvfz qamcoin-${LABEL}-${TAG}.tar.gz qamcoin-${TAG}/
+          echo ::set-output name=binary_path::qamcoin-${TAG}
+          echo ::set-output name=artifact_name::qamcoin-${LABEL}-${TAG}
+          echo ::set-output name=file_name::qamcoin-${LABEL}-${TAG}.tar.gz
 
 
       # Upload to GH Release
