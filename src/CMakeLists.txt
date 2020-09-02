@@ -135,9 +135,9 @@ elseif (UNIX)
 endif ()
 
 if (MSVC)
-    target_link_libraries(TurtleCoind System CryptoNoteCore rocksdb zstd lz4 leveldb snappy Errors ${Boost_LIBRARIES})
+    target_link_libraries(QamCoind System CryptoNoteCore rocksdb zstd lz4 leveldb snappy Errors ${Boost_LIBRARIES})
 else ()
-    target_link_libraries(TurtleCoind System CryptoNoteCore rocksdblib zstd lz4 leveldblib snappy Errors ${Boost_LIBRARIES})
+    target_link_libraries(QamCoind System CryptoNoteCore rocksdblib zstd lz4 leveldblib snappy Errors ${Boost_LIBRARIES})
 endif ()
 
 # Add the dependencies we need
