@@ -105,7 +105,7 @@ int main(int argc, char *argv[])
     // Initial loading of CLI parameters
     handleSettings(argc, argv, config);
 
-    if (config.printGenesisTx) // Do we weant to generate the Genesis Tx?
+    if (config.printGenesisTx) // Do we want to generate the Genesis Tx?
     {
         print_genesis_tx_hex(false, logManager);
         exit(0);
