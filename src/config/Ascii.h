@@ -6,8 +6,8 @@
 
 #include <string>
 
-const std::string windowsAsciiArt = 
-"  ______     ______     __    __     ______     ______     __     __   __     "  
+const std::string windowsAsciiArt = "
+   ______     ______     __    __     ______     ______     __     __   __     "  
 " /\  __ \   /\  __ \   /\ "-./  \   /\  ___\   /\  __ \   /\ \   /\ "-.\ \    " 
 "  \ \ \/\_\  \ \  __ \  \ \ \-./\ \  \ \ \____  \ \ \/\ \  \ \ \  \ \ \-.  \  "  
 "   \ \___\_\  \ \_\ \_\  \ \_\ \ \_\  \ \_____\  \ \_____\  \ \_\  \ \_\\"\_\ "
@@ -15,8 +15,8 @@ const std::string windowsAsciiArt =
                                                                                 
 
 
-const std::string nonWindowsAsciiArt =
-"  _____              ______      _           "      
+const std::string nonWindowsAsciiArt = "
+   _____              ______      _           "      
 " / ___ \            / _____)    (_)          "
 " | |   | |____ ____ | /      ___  _ ____     "
 " | |   |_/ _  |    \| |     / _ \| |  _ \    "
