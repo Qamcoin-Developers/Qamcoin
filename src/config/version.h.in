@@ -2,10 +2,10 @@
 #define STR(x) STR_HELPER(x)
 
 #define PROJECT_NAME "QamCoin"
-#define PROJECT_SITE ""
+#define PROJECT_SITE "" //update
 #define PROJECT_COPYRIGHT "Copyright 2020, The QamCoin Developers"
 #define APP_VER_MAJOR 0
-#define APP_VER_MINOR 28
+#define APP_VER_MINOR 0
 #define APP_VER_REV 1
 #define APP_VER_BUILD 1
 
