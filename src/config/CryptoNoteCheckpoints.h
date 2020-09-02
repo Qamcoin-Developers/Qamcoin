@@ -17,4 +17,4 @@ namespace CryptoNote
     };
 
     const std::initializer_list<CheckpointData> CHECKPOINTS = {};      
- // namespace CryptoNote
+} // namespace CryptoNote
