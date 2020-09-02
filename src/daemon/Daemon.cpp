@@ -1,7 +1,7 @@
 // Copyright (c) 2012-2017, The CryptoNote developers, The Bytecoin developers
 // Copyright (c) 2018, The Karai Developers
 // Copyright (c) 2018-2019, The TurtleCoin Developers
-// Copyright (c) 2019, The CyprusCoin Developers
+// Copyright (c) 2020, The QamCoin Developers
 //
 // Please see the included LICENSE file for more information.
 
@@ -105,7 +105,7 @@ int main(int argc, char *argv[])
     // Initial loading of CLI parameters
     handleSettings(argc, argv, config);
 
-    if (config.printGenesisTx) // Do we want to generate the Genesis Tx?
+    if (config.printGenesisTx) // Do we weant to generate the Genesis Tx?
     {
         print_genesis_tx_hex(false, logManager);
         exit(0);
