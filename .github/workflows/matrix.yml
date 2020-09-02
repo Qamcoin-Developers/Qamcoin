@@ -110,8 +110,8 @@ jobs:
           cd build/src
           TARGETS="QamCoind miner zedwallet qam-service cryptotest wallet-api wallet-upgrader"
           if [[ "${LABEL}" != "aarch64" ]]; then strip ${TARGETS}; fi
-          rm -rf turtlecoin-${TAG}
-          mkdir turtlecoin-${TAG}
+          rm -rf qamcoin-${TAG}
+          mkdir qamcoin-${TAG}
           cp ${TARGETS} qamcoin-${TAG}/
           cp ../../LICENSE qamcoin-${TAG}/
           tar cvfz qamcoin-${LABEL}-${TAG}.tar.gz qamcoin-${TAG}/
