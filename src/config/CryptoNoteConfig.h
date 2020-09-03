@@ -59,7 +59,7 @@ namespace CryptoNote
 
         static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
-        const char GENESIS_COINBASE_TX_HEX[] = "";
+        const char GENESIS_COINBASE_TX_HEX[] = "010a01ff00018080d8e7c0c6daec0702e471b3580dc20a00170448e1ab2a008e7150800b10424d9893357288a6ba3d522101440648726d4ccb7ee5896263eee99f480bfa51b556881bbbbf6a27bc902d2ea2";
        
 
         static_assert(
@@ -69,7 +69,7 @@ namespace CryptoNote
         /* This is the unix timestamp of the first "mined" block (technically block 2, not the genesis block)
            You can get this value by doing "print_block 2" in QamCoind. It is used to know what timestamp
            to import from when the block height cannot be found in the node or the node is offline. */
-        const uint64_t GENESIS_BLOCK_TIMESTAMP = 1599091695;
+        const uint64_t GENESIS_BLOCK_TIMESTAMP = 1599109200;
 
         const size_t CRYPTONOTE_REWARD_BLOCKS_WINDOW = 100;
 
