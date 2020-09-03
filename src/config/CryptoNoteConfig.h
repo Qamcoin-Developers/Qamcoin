@@ -253,25 +253,7 @@ namespace CryptoNote
 
         /* Block heights we are going to have hard forks at */
         const uint64_t FORK_HEIGHTS[] = {
-            187000, // 0
-            350000, // 1
-            440000, // 2
-            620000, // 3
-            700000, // 4
-            800000, // 5
-            1000000, // 6
-            1200000, // 7
-            1300000, // 8
-            1400000, // 9
-            1600000, // 10
-            1800000, // 11
-            2000000, // 12
-            2200000, // 13
-            2400000, // 14
-            2600000, // 15
-            2800000, // 16
-            3000000, // 17
-        };
+         };
 
         /* MAKE SURE TO UPDATE THIS VALUE WITH EVERY MAJOR RELEASE BEFORE A FORK */
         const uint64_t SOFTWARE_SUPPORTED_FORK_INDEX = 16;
@@ -385,18 +367,14 @@ namespace CryptoNote
 
     const char LATEST_VERSION_URL[] = "";   //change
 
-    const std::string LICENSE_URL = "https://github.com/ijmcglynn/QamCoin-Dev/blob/main/LICENSE";
+    const std::string LICENSE_URL = "https://github.com/ijmcglynn/QamCoin-Dev/blob/Main/LICENSE";
 
     const static boost::uuids::uuid CRYPTONOTE_NETWORK = {
         {0xa5, 0x1c, 0x5a, 0x6b, 0xce, 0x42, 0x17, 0x4e, 0x65, 0xf8, 0x91, 0xb4, 0xb6, 0xc1, 0x43, 0xe9}};
 
     const char *const SEED_NODES[] = {
         "73.77.40.61:11887", // rock
-        "145.239.88.119:11897", // cision
-        "165.227.252.132:11897", // iburnmycd
-        "148.251.178.238:11897", // hv
-        "45.32.138.7:11897", // extra
-        "46.214.70.196:11897", // CuveeRO
-        "94.113.119.122:11897" // CuveeCZ
+        "82.41.218.84:11897" // cision
+        
     };
 } // namespace CryptoNote
