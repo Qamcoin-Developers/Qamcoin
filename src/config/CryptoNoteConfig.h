@@ -391,7 +391,7 @@ namespace CryptoNote
         {0xa5, 0x1c, 0x5a, 0x6b, 0xce, 0x42, 0x17, 0x4e, 0x65, 0xf8, 0x91, 0xb4, 0xb6, 0xc1, 0x43, 0xe9}};
 
     const char *const SEED_NODES[] = {
-        "73.77.40.61:11887", // rock
+        "79.77.40.61:11887", // rock
         "82.41.218.84:11897" // cision
         
     };
